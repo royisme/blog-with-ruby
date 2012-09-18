@@ -14,7 +14,7 @@ def public_path(*args)
   root_path('public', *args)
 end
 class BlogApp < Sinatra::Application
-    require 'config/env'
+    require 'config/env.rb'
     Dir[root_path("app/**/*.rb")].each do |file|
         require file
     end
