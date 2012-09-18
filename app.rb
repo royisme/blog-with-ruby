@@ -14,17 +14,7 @@ def public_path(*args)
   root_path('public', *args)
 end
 class BlogApp < Sinatra::Application
-  #  configure do
-    set :environment,:development
-#set :run, false
-    set :root, root_path
-    set :views, root_path("app","views")
-    set :modules, root_path("app","modules")
-    set :images_path, public_path("images")
-    set :static, true
-    set :show_exceptions, true
-    set :bind, 'localhost'
-    set :port, 4567 
+    require 'config/env'
     Dir[root_path("app/**/*.rb")].each do |file|
         require file
     end
