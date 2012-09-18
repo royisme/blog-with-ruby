@@ -13,7 +13,7 @@ end
 def public_path(*args)
   root_path('public', *args)
 end
-class AppleTV < Sinatra::Application
+class BlogApp < Sinatra::Application
   #  configure do
     set :environment,:development
 #set :run, false
