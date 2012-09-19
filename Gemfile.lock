@@ -85,6 +85,7 @@ DEPENDENCIES
   data_mapper
   dm-aggregates
   dm-core
+  dm-do-adapter
   dm-migrations
   dm-sqlite-adapter
   dm-timestamps
