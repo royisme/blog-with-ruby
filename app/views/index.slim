@@ -1,13 +1,13 @@
 == slim :header
 body
-  div class="navbar navbar-inverse navbar-fixed-top"
+  div   class="navbar navbar-inverse navbar-fixed-top"
     .navbar-inner
       .container
         a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"
           span  class="icon-bar"
           span  class="icon-bar"
           span  class="icon-bar"
-        a.brand href="#" roy's blog
+        a.brand href="#" ROY BLOG
         div class="nav-collapse collapse"
           ul class="nav"
             li class="active"
@@ -16,7 +16,29 @@ body
               a href="#about" About
             li
               a href="#contact" Contact
+        form class="navbar-search pull-left"
+          input type="text" class="search-query" placeholder="Search"
 
-  .container
-    h1 Bootstrap starter template
-    p Use this document as a way to quick start any new project.<br> All you get is this message and a barebones HTML document.
+  .container-fluid
+    .row-fluid
+      .span2
+        ul class="nav nav-pills nav-stacked"
+          li class="nav-header" 
+            h3 class="nav-title" 抽屉
+          li class="active"
+            a href="#" 技术笔记
+          li 
+            a href="#" 游戏娱乐
+          li 
+            a href="#" 生活琐碎
+          li 
+            a href="/admintools/" 我的工具箱
+      .span10
+        .hero-unit 
+          span 
+            p 这里是 ROY 的BLOG ，专注 互联网技术
+    hr
+    footer class="footer"
+      p class="pull-right" pow
+      p Icons取自 <a href="http://glyphicons.com">Glyphicons Free</a>，授权依照 <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>。</p>
+      p Powered by  <a href="http://www.royisme.com">ROYBOX</a>

@@ -1,0 +1,10 @@
+body {
+  background-color: #ccc;
+  padding-top: 60px;
+}
+.nav-title {
+  color: #08c;
+}
+.hero-unit {
+  min-height: 500px;
+}

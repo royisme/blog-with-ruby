@@ -5,8 +5,7 @@ require 'slim'
 configure do
     set :environment,:development
 	set :run, false
-   
-    set :static, true
+    set :static, false
     set :show_exceptions, true
     # set :bind, 'localhost'
     # set :port, 4567 

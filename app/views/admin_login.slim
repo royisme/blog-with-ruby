@@ -1,0 +1,46 @@
+== slim :header
+body
+  div   class="navbar navbar-inverse navbar-fixed-top"
+    .navbar-inner
+      .container
+        a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"
+          span  class="icon-bar"
+          span  class="icon-bar"
+          span  class="icon-bar"
+        a.brand href="#" ROY BLOG
+        div class="nav-collapse collapse"
+          ul class="nav"
+            li class="active"
+              a href="#" HOME
+            li 
+              a href="#about" About
+            li
+              a href="#contact" Contact
+        form class="navbar-search pull-left"
+          input type="text" class="search-query" placeholder="Search"
+
+ 
+  .container  
+      .hero-unit 
+        span 
+          p 这里是 ROY 的BLOG ，专注 互联网技术
+        form class="form-horizontal" id="admin_login" method="POST"
+          fieldset
+            legend 管理员验证
+            .control-group
+                label class="control-label" for="input01" 名称
+                .controls
+                  input type="text" class="input-medium" id="input01" required="required" maxLength="10" name="admin_name"
+                  p class="help-block" 字母，数字，汉字皆可
+            .control-group
+                label class="control-label" for="input01" 密码
+                .controls
+                  input type="password" class="input-medium" id="input02" required="required" maxLength="16" name="admin_pass"
+                  p class="help-block" 只能重试3次哦
+            .form-actions
+                button type="submit" class="btn btn-primary"  提交
+
+        == slim :footer
+  script src=url("/js/jquery.js")
+  script src=url("/js/bootstrap.min.js")
+  script src=url("/js/roybox.js")
