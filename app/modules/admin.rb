@@ -13,7 +13,7 @@ post '/admintools' do
 end
 get '/admintools/' do
 	if session[:admin_name]!='zshaoqing'
-		redirect '/admintoosls'
+		redirect '/admintools'
 	end
 	slim :amdin_index
 end
