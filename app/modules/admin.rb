@@ -12,5 +12,8 @@ post '/admintools' do
 	nil
 end
 get '/admintools/' do
+	if session[:admin_name].epmty? 
+		redirect '/admintoosls'
+	end
 	slim :amdin_index
 end
