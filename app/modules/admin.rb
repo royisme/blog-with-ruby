@@ -12,7 +12,7 @@ post '/admintools' do
 	nil
 end
 get '/admintools/' do
-	if session[:admin_name].epmty? 
+	if session[:admin_name]!='zshaoqing'
 		redirect '/admintoosls'
 	end
 	slim :amdin_index
