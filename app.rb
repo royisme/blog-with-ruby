@@ -28,7 +28,9 @@ class BlogApp < Sinatra::Application
         set :public_folder , public_path
         set :sessions,true
     end
-
+    def static_path_url(static_file)
+        "#{request.scheme}://#{settings.site_assets}#{static_file}"
+    end
     Dir[root_path("app/**/*.rb")].each do |file|
         require file
     end
