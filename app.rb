@@ -28,12 +28,7 @@ class BlogApp < Sinatra::Application
         set :public_folder , public_path
         set :sessions,true
     end
-    # Dir[ public_path('js','*.js' )].each do |js_file|
-    #          File.basename js_file
-    # end
-    #get '/css/*.css' do
-    # require root_path('app/helpers/viewHelper.rb')
-    # helpers ViewHelper
+
     Dir[root_path("app/**/*.rb")].each do |file|
         require file
     end
