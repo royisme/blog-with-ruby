@@ -1,7 +1,7 @@
 
 get '/admintools' do
 	helpers ViewHelper
-	# static_path_url('/css/s.js')
+	 static_path_url('/css/s.js')
 	slim :admin_login
 end
 post '/admintools' do

@@ -16,6 +16,7 @@ end
 
 class BlogApp < Sinatra::Application
     configure do 
+        set :environment,  ENV['RACK_ENV']
         set :root, root_path
         set :datas, root_path("app","data")
         set :helpers, root_path("app","helpers")
