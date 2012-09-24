@@ -1,4 +1,3 @@
-helpers ViewHelper
 get '/admintools' do
 	slim :admin_login
 end
