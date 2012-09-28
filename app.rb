@@ -43,6 +43,8 @@ configure  do
 end
 
 configure :production do
+    set :show_exceptions, false
+    set :port, 8486
     set :site_assets,'www.royisme.com'
 end
 
