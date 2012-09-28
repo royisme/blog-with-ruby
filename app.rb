@@ -1,5 +1,5 @@
 require 'rubygems'
-require 'bundler/setup'
+require 'bundler'
 require "debugger"
 require 'sinatra'
 require 'sinatra/config_file'
@@ -53,8 +53,10 @@ DataMapper.setup(:default, settings.sql3_URL)
 def static_path_url(static_file)
     "#{request.scheme}://#{settings.site_assets}#{static_file}"
 end
-Dir[root_path("app/*/*.rb")].each do |file|
-    load file
+#Dir[File.dirname(__FILE__) + '/app/helpers/*.rb'].each {|file| load file }
+
+Dir[root_path("app/modules/*.rb"),root_path("app/model/*.rb")].each do |file|
+    require file
 end
     # sinatra reloader
     # if ENV["RACK_ENV"] == "development"
