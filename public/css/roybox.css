@@ -1,10 +1,4 @@
-body {
-  background-color: #ccc;
-  padding-top: 60px;
-}
-.nav-title {
-  color: #08c;
-}
-.hero-unit {
-  min-height: 500px;
-}
+body{background-color:#ccc;background-image:url(../img/mac_background.png);}
+.container-fluid{padding-top:40px;}
+.row-fluid{padding-top:20px;}
+.footer{color:#ccc;}

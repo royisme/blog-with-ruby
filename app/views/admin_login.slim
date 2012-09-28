@@ -21,7 +21,7 @@ body
 
  
   .container  
-      .hero-unit 
+    .hero-unit 
         span 
           p 这里是 ROY 的BLOG ，专注 互联网技术
         form class="form-horizontal" id="admin_login" method="POST"
@@ -30,17 +30,13 @@ body
             .control-group
                 label class="control-label" for="input01" 名称
                 .controls
-                  input type="text" class="input-medium" id="input01" required="required" maxLength="10" name="admin_name"
+                  input type="text" class="input-medium" id="input01" required="required" minLength="6" maxLength="10" name="admin_name"
                   p class="help-block" 字母，数字，汉字皆可
             .control-group
                 label class="control-label" for="input01" 密码
                 .controls
-                  input type="password" class="input-medium" id="input02" required="required" maxLength="16" name="admin_pass"
+                  input type="password" class="input-medium" id="input02" required="required" minLength="8" maxLength="16" name="admin_pass"
                   p class="help-block" 只能重试3次哦
             .form-actions
                 button type="submit" class="btn btn-primary"  提交
-
-        == slim :footer
-  script src=static_path_url("/js/jquery.js")
-  script src=static_path_url("/js/bootstrap.min.js")
-  script src=static_path_url("/js/roybox.js")
+    == slim :footer

@@ -1,0 +1,4 @@
+admin: 
+ name: "admin_roy"
+ pass: "royzhu1225"
+greeting: Welcome to my file configurable application
