@@ -1,4 +1,3 @@
-
 module AuthHelper
   module AdminAuth
     config_file(File.join(ROOT_DIR ,'config/admin.yaml'))
@@ -24,7 +23,6 @@ module AuthHelper
     end
   end
   helpers AdminAuth
-
 end
 #
   #   def initialize

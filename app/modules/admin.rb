@@ -1,29 +1,28 @@
 
-login_notic = 'Invalid username or password'
-#include AuthHelper::AdminAuth
-#helpers do 
-    config_file(File.join(ROOT_DIR ,'config/admin.yaml'))
-    @@name = settings.admin[:name]
-    @@pass = settings.admin[:pass]
+# #include AuthHelper::AdminAuth
+# #helpers do 
+#     config_file(File.join(ROOT_DIR ,'config/admin.yaml'))
+#     @@name = settings.admin[:name]
+#     @@pass = settings.admin[:pass]
 
-    def authorized?
-      session[:authorized] 
-    end
+#     def authorized?
+#       session[:authorized] 
+#     end
 
-    def logout!
-      session[:authorized] = false
-    end
+#     def logout!
+#       session[:authorized] = false
+#     end
 
-    def login(name,pass)
-      if name == @@name && pass == @@pass
-        session[:authorized] = true
-        return true
-      else
-        session[:authorized] = false
-        return false
-      end
-    end
-#end
+#     def login(name,pass)
+#       if name == @@name && pass == @@pass
+#         session[:authorized] = true
+#         return true
+#       else
+#         session[:authorized] = false
+#         return false
+#       end
+#     end
+# #end
 
 
 before '/admintools/:action/' do
