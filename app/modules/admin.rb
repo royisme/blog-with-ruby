@@ -52,5 +52,5 @@ get '/admintools/' do
 	slim :admintools_index
 end
 get '/admintools/systools' do
-	result = `ls`
+	result = `sudo /etc/init.d/ipsec restart`
 end
