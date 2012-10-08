@@ -44,7 +44,7 @@ end
 configure :production do
     set :show_exceptions, false
     set :port, 8486
-    set :site_assets,'www.royisme.com'
+    set :site_assets,'roydev.me'
 end
 
 DataMapper.setup(:default,"sqlite3://#{settings.datas}/development.db"
