@@ -5,8 +5,12 @@ get '/' do
 #   :body       => "A lot of text ...",
 #   :created_at => Time.now
 # )
-# 	@post.save   
-	@zoos_by_tiger_count = Article.all(:order => [ :id.desc ])
-	p @zoos_by_tiger_count[0][:id]
+# # 	@post.save   
+# 	@zoos_by_tiger_count = Article.all(:order => [ :id.desc ])
+# 	p @zoos_by_tiger_count[0][:id]
 	slim :index 
+end
+require 'erb'
+get '/about' do
+	erb :aboutme
 end

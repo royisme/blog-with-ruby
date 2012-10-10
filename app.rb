@@ -22,38 +22,38 @@ end
 
 use Rack::Session::Pool, :expire_after => 2592000
 
-configure  do 
+configure  do
 
-    set :root, root_path
-    set :run, false
-    set :static, true
-    set :show_exceptions, true
-    set :datas, root_path("app","data")
+  set :root, root_path
+  set :run, false
+  set :static, true
+  set :show_exceptions, true
+  set :datas, root_path("app","data")
 
-    set :images_path, public_path("img")
-    set :css_path, public_path('css')
-    set :js_path,public_path("js")
-    set :modules, root_path("app","modules")
-    set :views, root_path("app","views")
-    set :public_folder , public_path
-    set :sessions,false
-    set :port, 8080
-    set :site_assets,'127.0.0.1:8080'
+  set :images_path, public_path("img")
+  set :css_path, public_path('css')
+  set :js_path,public_path("js")
+  set :modules, root_path("app","modules")
+  set :views, root_path("app","views")
+  set :public_folder , public_path
+  set :sessions,false
+  set :port, 8080
+  set :site_assets,'127.0.0.1:8080'
 end
 
 configure :production do
-    set :show_exceptions, false
-    set :port, 8486
-    set :site_assets,'roydev.me'
+  set :show_exceptions, false
+  set :port, 8486
+  set :site_assets,'roydev.me'
 end
 
 DataMapper.setup(:default,"sqlite3://#{settings.datas}/development.db"
-)
+                 )
 def static_path_url(static_file)
-    "#{request.scheme}://#{settings.site_assets}#{static_file}"
+  "#{request.scheme}://#{settings.site_assets}#{static_file}"
 end
 Dir[root_path("app/**/*.rb")].each do |file|
 
-    load file
+  load file
 end
 helpers AuthHelper::AdminAuth

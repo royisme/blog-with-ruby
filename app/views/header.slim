@@ -8,3 +8,22 @@ html lang="zh-hans"
 		link rel="stylesheet" href=static_path_url("/css/bootstrap.css") 
 		link rel="stylesheet" href=static_path_url("/css/roybox.css")
 	/!--- test--
+	body
+	  div   class="navbar  navbar-fixed-top"
+	    .navbar-inner
+	      .container
+	        a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"
+	          span  class="icon-bar"
+	          span  class="icon-bar" 
+	          span  class="icon-bar"
+	        a.brand href="#" { ROY BLOG }
+	        div class="nav-collapse collapse"
+	          ul class="nav"
+	            li class="active"
+	              a href="#" HOME
+	            li 
+	              a href="/about" About Me
+	            li
+	              a href="#contact" Contact
+	        form class="navbar-search pull-right"
+	          input type="text" class="search-query" placeholder="Search"
